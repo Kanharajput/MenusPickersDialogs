@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- favorite to show in toolbar -->
+    <!--icon needed only when to show in app bar -->
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_baseline_favorite_48"
+        android:title="@string/favorite_string"
+        app:showAsAction="ifRoom" />
+
+    <!--setting things make showAsAction = never to get it by clicking three dots(overflow menu)-->
+    <item
+        android:id="@+id/action_setting"
+        android:title="@string/settings_string"
+        app:showAsAction="never"
+        />
+
+</menu>

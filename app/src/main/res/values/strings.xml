@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MenusPickers</string>
+    <string name="favorite_string">favorite</string>
+    <string name="settings_string">settings</string>
+</resources>
