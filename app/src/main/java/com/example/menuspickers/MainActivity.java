@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.ContextMenu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
+    private TextView txtv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +45,40 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // referencing the textview
+        txtv = findViewById(R.id.textView);
+
+        // register the view to the context menu
+        registerForContextMenu(txtv);
+
+
+    }
+
+    @Override        // to create context menu
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu,v,menuInfo);
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.context_menu,menu);
+    }
+
+    public boolean onContextItemSelected(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.action_edit :
+                            showToast("Edit karenga hosiyar");
+                            return true;
+
+            case R.id.action_share :
+                            showToast("kisko bhejega bata");
+                            return true;
+
+            case R.id.action_delete:
+                            showToast("delete! soch le");
+                            return true;
+
+            default: showToast("kaha click ker ra");
+                return false;
+        }
     }
 
     public void showToast(String message) {
