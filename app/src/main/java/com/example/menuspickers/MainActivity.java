@@ -3,6 +3,9 @@ package com.example.menuspickers;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -13,6 +16,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
+
+import java.io.FileDescriptor;
+import java.io.PrintWriter;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private TextView txtv;
@@ -65,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onContextItemSelected(MenuItem menuItem) {
         switch (menuItem.getItemId()) {
             case R.id.action_edit :
-                            showToast("Edit karenga hosiyar");
+                            showToast("Edit! kerna hai");
                             return true;
 
             case R.id.action_share :
@@ -79,6 +86,12 @@ public class MainActivity extends AppCompatActivity {
             default: showToast("kaha click ker ra");
                 return false;
         }
+    }
+
+    public void openDialog(View view) {
+        FragmentManager fragmentManager = getFragmentManager();
+        SimpleDialogFragment simpleDialogFragment = new SimpleDialogFragment();
+        simpleDialogFragment.show(fragmentManager,"calling_dialog");
     }
 
     public void showToast(String message) {
