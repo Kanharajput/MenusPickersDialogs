@@ -12,23 +12,16 @@ public class SimpleDialogFragment extends DialogFragment {
     @Override
     public Dialog onCreateDialog(Bundle savedInstaceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        builder.setMessage(R.string.alert_message);
-
-        builder.setPositiveButton(R.string.ok_string, new DialogInterface.OnClickListener() {
+        builder.setTitle(R.string.dialog_title);
+        // setting a list from which only one item can be selected
+        builder.setItems(R.array.color_list, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getActivity(),"Ok clicked",Toast.LENGTH_SHORT).show();
+                if(which == 0) {      // which is the index no. of the selected item in array
+                    Toast.makeText(getActivity(),"yellow_clicked",Toast.LENGTH_SHORT).show();
+                }
             }
         });
-
-        builder.setNegativeButton(R.string.cancel_string, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getActivity(),"Cancel clicked",Toast.LENGTH_SHORT).show();
-            }
-        });
-
         return builder.create();
     }
-
 }

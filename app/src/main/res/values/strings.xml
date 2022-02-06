@@ -6,4 +6,14 @@
     <string name="alert_message">Click on continue.</string>
     <string name="ok_string">OK</string>
     <string name="cancel_string">Cancel</string>
+    <string name="dialog_title">Choose Fav Color</string>
+
+    <string-array name="color_list">
+        <item>Yellow</item>
+        <item>Purple</item>
+        <item>Blue</item>
+    </string-array>
+
+
+
 </resources>

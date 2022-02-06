@@ -21,7 +21,7 @@ import java.io.FileDescriptor;
 import java.io.PrintWriter;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     private TextView txtv;
 
     @Override
