@@ -10,6 +10,7 @@
     <string name="sing_in">Sign in</string>
     <string name="email_hint">email address</string>
     <string name="pass_hint">password</string>
+    <string name="time_btn_string">Select Time</string>
 
     <string-array name="color_list">
         <item>Yellow</item>

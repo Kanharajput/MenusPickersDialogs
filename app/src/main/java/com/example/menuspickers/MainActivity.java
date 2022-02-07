@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity  {
         }
     }
 
+    // opens up the dialog
     public void openDialog(View view) {
         FragmentManager fragmentManager = getFragmentManager();
         SimpleDialogFragment simpleDialogFragment = new SimpleDialogFragment();
@@ -98,4 +99,10 @@ public class MainActivity extends AppCompatActivity  {
         Toast.makeText(this,message,Toast.LENGTH_SHORT).show();
     }
 
+    // Select time
+    public void TimePicker(View view) {
+        FragmentManager fragmentManager = getFragmentManager();
+        TimePickerFragment timePickerFragment = new TimePickerFragment();
+        timePickerFragment.show(fragmentManager,"picking time");
+    }
 }
