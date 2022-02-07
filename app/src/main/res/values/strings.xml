@@ -7,6 +7,9 @@
     <string name="ok_string">OK</string>
     <string name="cancel_string">Cancel</string>
     <string name="dialog_title">Choose 3 Fav Color</string>
+    <string name="sing_in">Sign in</string>
+    <string name="email_hint">email address</string>
+    <string name="pass_hint">password</string>
 
     <string-array name="color_list">
         <item>Yellow</item>
