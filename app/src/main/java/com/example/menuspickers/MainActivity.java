@@ -105,4 +105,10 @@ public class MainActivity extends AppCompatActivity  {
         TimePickerFragment timePickerFragment = new TimePickerFragment();
         timePickerFragment.show(fragmentManager,"picking time");
     }
+
+    // select date
+    public void DatePicker(View view) {
+        DatePickerFragment datePickerFragment = new DatePickerFragment();
+        datePickerFragment.show(getFragmentManager(),"picking_date");
+    }
 }
