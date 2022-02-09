@@ -59,10 +59,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dialog"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="100dp"
         android:onClick="openDialog"
         app:layout_constraintTop_toBottomOf="@id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/second_opening_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Second"
+        android:onClick="launchSecondAct"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="275dp"
+        tools:layout_editor_absoluteY="506dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

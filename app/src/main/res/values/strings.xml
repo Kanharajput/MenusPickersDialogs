@@ -12,6 +12,7 @@
     <string name="pass_hint">password</string>
     <string name="time_btn_string">Select Time</string>
     <string name="date_btn_string">SELECT DATE</string>
+    <string name="second_activity_name">Set Up Navigation</string>
 
     <string-array name="color_list">
         <item>Yellow</item>

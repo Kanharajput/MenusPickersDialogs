@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -110,5 +111,10 @@ public class MainActivity extends AppCompatActivity  {
     public void DatePicker(View view) {
         DatePickerFragment datePickerFragment = new DatePickerFragment();
         datePickerFragment.show(getFragmentManager(),"picking_date");
+    }
+
+    public void launchSecondAct(View view) {
+        Intent intent = new Intent(this,SecondActivity.class);
+        startActivity(intent);
     }
 }
